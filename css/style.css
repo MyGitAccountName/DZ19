@@ -1,0 +1,121 @@
+html {
+    font-family: "Comic Sans MS", Arial, sans-serif;
+    font-size: 24px;
+    color: ghostwhite;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(0, #474eab, #a064b8, #a244bc);
+    background-repeat: no-repeat;
+    min-width: 570px;
+    min-height: 100vh;
+}
+
+header {
+    text-shadow: 0 2px 2px #212872;
+}
+
+header h1 {
+    margin: 0;
+    padding-top: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#taskList {
+    display: block;
+    width: 50%;
+}
+
+#taskList input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+    font-size: 18px;
+    color: #1f1f29;
+}
+
+#task {
+    display: none;
+    text-shadow: 0 2px 2px #212872;
+}
+
+#task h3 {
+    margin: 20px 0 10px;
+}
+
+#task input {
+    width: 160px;
+    margin: 0 auto;
+    font-size: 27px;
+    text-align: center;
+    font-family: "Comic Sans MS", Arial, sans-serif;
+}
+
+#task input[name="btn6"] {
+    width: 170px;
+    margin-top: 50px;
+}
+
+#task input[name="btn7"] {
+    display: block;
+    width: 170px;
+    margin-top: 10px;
+}
+
+#task input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: block;
+    color: #c0b4c8;
+    font-size: 28px;
+    text-decoration: none;
+    margin: 0.9375rem;
+    margin-top: 0;
+}
+
+label:hover {
+    color: ghostwhite;
+    cursor: pointer;
+}
+
+#task input:checked + label {
+    width: 200px;
+    color: ghostwhite;
+    padding-bottom: 4px;
+    border: 2px solid white;
+    margin: 0 auto;
+}
+
+#task input:checked + label::before {
+    margin-right: 7px;
+    content: "\F00C";
+    font-family: "FontAwesome", sans-serif;
+    position: relative;
+    left: 0;
+    top: -2px;
+    font-size: 1rem;
+}
+
+#task p {
+    display: none;
+}
+
+.result h2 {
+    width: 90vw;
+    display: block;
+    text-wrap: inherit;
+    word-wrap: break-word;
+    text-shadow: 0 4px 4px #212872;
+    font-size: 64px;
+}

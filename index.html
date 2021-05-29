@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DZ_19</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+    <h1>Домашняя работа №19</h1>
+</header>
+
+<div class="content">
+    <script src="JS/DZ19.js"></script>
+
+    <div id="taskList">
+        <input type="button" value="1. Факториал заданного числа" onclick=setParameters(1) name="btn1">
+        <input type="button" value="2. Числа из диапазона" onclick=setParameters(2) name="btn2">
+        <input type="button" value="3. Число задом наперед" onclick=setParameters(3) name="btn3">
+        <input type="button" value="4. Сумма цифр числа" onclick=setParameters(4) name="btn4">
+        <input type="button" value="5. Заданное количество пар скобок" onclick=setParameters(5) name="btn5">
+    </div>
+
+    <div id="task">
+        <h2 id="condition">Задача</h2>
+        <h3>Запрос 1</h3>
+        <input type="text">
+        <h3>Запрос 2</h3>
+        <input type="text">
+        <h3>Запрос 2</h3>
+        <input type="text">
+
+        <p><input type="radio" name="f2" id="r1" checked>
+            <label for="r1">Прямой порядок</label></p>
+        <p><input type="radio" name="f2" id="r2">
+            <label for="r2">Обратный порядок</label></p>
+
+        <input type="button" value="Выполнить" onclick=doChosen() name="btn6">
+        <input type="button" value="Назад" onclick=showTaskList() name="btn7">
+    </div>
+    <div class="result">
+        <h2 id="result"></h2>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
