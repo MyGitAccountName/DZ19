@@ -91,10 +91,7 @@ function isSomeNaN(...P) {
 
 // Факториал заданного числа
 function getFactorial(num) {
-    if (num === 1) return 1;
-    else {
-        return num * getFactorial(num - 1);
-    }
+    return num === 1 ? 1 : num * getFactorial(--num);
 }
 
 function makeTask1(p1) {
@@ -110,28 +107,20 @@ function makeTask1(p1) {
 
 // Числа из диапазона
 function showNumbersInArea(begin, end) {
-    if (end === begin) return end;
-    else {
-        return (`${begin}, ${showNumbersInArea(begin + 1, end)} `);
-    }
+    return end === begin ? end : `${begin}, ${showNumbersInArea(++begin, end)} `;
 }
 
 function showNumbersInAreaReverse(begin, end) {
-    if (end === begin) return end;
-    else {
-        return (`${end}, ${showNumbersInAreaReverse(begin, end - 1)} `);
-    }
+    return end === begin ? end : `${end}, ${showNumbersInAreaReverse(begin, --end)} `;
 }
 
 function makeTask2(p1, p2, p3) {
     a = +p1;
     b = +p2;
-
     if (isSomeEmpty(2) || isSomeNaN(a, b) || a > b) {
         alert("Ошибка в исходных данных!");
         return '';
-    } else if (p3 === true) return showNumbersInArea(Math.ceil(a), Math.floor(b));
-    else return showNumbersInAreaReverse(Math.ceil(a), Math.floor(b));
+    } else return (p3) ? showNumbersInArea(Math.ceil(a), Math.floor(b)) : showNumbersInAreaReverse(Math.ceil(a), Math.floor(b));
 }
 
 
@@ -153,7 +142,6 @@ function makeTask3(p1) {
     } else return +(getNumberInReverse(p1));
 }
 
-
 // Сумма цифр числа
 function getSum(num) {
     if (num === '' || num === '-') return 0;
@@ -171,8 +159,7 @@ function makeTask4(p1) {
 
 // Круглые скобки
 function addDoubleBrackets(num) {
-    if (num === 0) return '';
-    else return '(' + addDoubleBrackets(num - 1) + ')';
+    return !num ? '' : '(' + addDoubleBrackets(num - 1) + ')';
 }
 
 function makeTask5(p1) {
@@ -182,7 +169,6 @@ function makeTask5(p1) {
         return '';
     } else return addDoubleBrackets(a);
 }
-
 
 // Выполнение выбранного задания
 function doChosen() {
